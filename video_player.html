@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="video_player.css">
+</head>
+<body>
+	<div id="video">
+		<table>
+		<tr>
+			<td>
+				<div>
+				<h3>Video 1</h3>
+				<video class = "my_video" id="my_video1" width="550" height="310" autoplay>
+			    	<source src="test1.mp4">
+				</video>
+				</div>
+			</td>
+			<td>
+				<div>
+			<h3>Video 2</h3>
+			<video class = "my_video" id="my_video2" width="550" height="310" autoplay>
+		    	<source src="test1.mp4">
+			</video>
+		</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="video_controls_bar" id="control1">
+					<button class="playbtn"></button>
+					<button class="pausebtn"></button>
+					<input class="seekslider" type="range" min="0" max="100" value="0" step="1">
+					<span class="curtimetext">00:00</span><span class="slash"> / </span><span class="durtimetext">00:00</span>
+					<button class="mutebtn"></button>
+					<input class="volumeslider" type="range" min="0" max="100" value="100" step="1">
+				</div>
+			</td>
+			<td>
+				<div class="video_controls_bar" id="control2">
+					<button class="playbtn"></button>
+					<button class="pausebtn"></button>
+					<input class="seekslider" type="range" min="0" max="100" value="0" step="1">
+					<span class="curtimetext">00:00</span><span class="slash"> / </span><span class="durtimetext">00:00</span>
+					<button class="mutebtn"></button>
+					<input class="volumeslider" type="range" min="0" max="100" value="100" step="1">
+				</div>
+			</td>
+		</tr>		
+		</table>
+	</div>
+	<div id="selectVideo">
+		Please select a main video(default video1)
+		<select id="videos">
+			<option value="video1">video1</option>
+			<option value="video2">video2</option>
+		</select>
+		<input id="submit" type="submit">
+	</div>
+	<div id="selectVolume">
+		</br>Please select the volume(default all videos)
+		<input type="checkbox" name ="number1" value="my_video1"/>Video1
+		<input type="checkbox" name ="number2" value="my_video2"/>Video2
+		<input id="btnGetVolume" type="submit" value="Submit"/>
+	</div>
+	<div class="video_controls_bar" id="main_control">
+		<button class="playbtn"></button>
+		<button class="pausebtn"></button>
+		<input class="seekslider" type="range" min="0" max="100" value="0" step="1">
+		<span class="curtimetext">00:00</span><span class="slash"> / </span><span class="durtimetext">00:00</span>
+		<button class="mutebtn"></button>
+		<input class="volumeslider" type="range" min="0" max="100" value="100" step="1">
+	</div>
+	<div id="stop_point">
+		<p>Together stop point:<br></p>
+	</div>
+	<div class="return">
+		<table>
+		<tr>
+		<td>
+			<div id="customDropdown" class="btn">
+				<span class="valueHolder">Select an Option</span>
+				<div id="dropContainer"></div>
+			</div>
+		</td>
+		<td>
+			<input id="returnbtn" class='btn1'type="button" value="return">
+		</td>
+		</tr>
+		</table>
+	</div>
+	<script src="video_player1.js"></script>
+	<script src="video_player2.js"></script>
+</body>
+</html>
