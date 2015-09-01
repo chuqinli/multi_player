@@ -1,4 +1,8 @@
 $(document ).ready(function(){
+
+	registerPlayerCallbackEvents(1);
+    registerPlayerCallbackEvents(2);
+    
 	var oldvol;
 	var my_video = $('.my_video');
 	var volumeHistory = {};
