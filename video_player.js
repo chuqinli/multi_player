@@ -1,15 +1,14 @@
 $(document ).ready(function(){
+    //trans each div's id as the parameter
+	SingleControl(0);
+    SingleControl(1);
 
-	registerPlayerCallbackEvents(1);
-    registerPlayerCallbackEvents(2);
-    
 	var oldvol;
 	var my_video = $('.my_video');
 	var volumeHistory = {};
 	$('#videos')[0].defaultValue = "video1";
 	var volumeSelected = ["my_video1","my_video2"];
 	$("#submit").click(function(){
-		console.log($('#videos').val());
 		if ($('#videos').val() == "video1"){
 			$('#main_control .seekslider')[0].value = my_video[0].currentTime*(100 / my_video[0].duration);
 			$('#main_control .volumeslider')[0].value = my_video[0].volume * 100;
@@ -164,7 +163,6 @@ $(document ).ready(function(){
 			} else {
 				oldvol1 = my_video[0].volume;
 				my_video[0].volume = 0;
-				//$('#volumeslider')[0].value = 0;
 				$('#main_control .mutebtn').css('backgroundImage','url(mute.png)');
 			}
 		}
@@ -175,40 +173,15 @@ $(document ).ready(function(){
 			} else {
 				oldvol2 = my_video[1].volume;
 				my_video[1].volume = 0;
-				//$('#volumeslider')[0].value = 0;
 				$('#main_control .mutebtn').css('backgroundImage','url(mute.png)');
 			}
 		}
 	});
 	$('#main_control .volumeslider').on("input",function(){
-		var old = $('#main_control .volumeslider')[0].value/100;
-		console.log("old="+old);
-		my_video.each(function(){
-			var currentVolume = $(this)[0].volume;
-			console.log("currentVolume="+currentVolume);
-			$(this)[0].volume = old * currentVolume;
-			console.log("new volume = " + $(this)[0].volume);	
-			//$(this)[0].volume  = (old / $('#volumeslider')[0].value)* currentVolume;
-		});
+		var scale = $('#main_control .volumeslider')[0].value/100;
+		for(var i = 0; i < 2 ; i++){
+		    my_video[i].volume = scale * ($('#control'+i+' .volumeslider')[0].value/100);
+		    console.log(my_video[i].volume);
+		}
 	});
-	// $('#my_video1').mouseenter(function() {
-	// 	if (!this.hasAttribute("controls")) {
-	// 		this.setAttribute("controls","controls")   
-	// 	}
-	// });
-	// $('#my_video1').mouseout(function() {
-	// 	if (this.hasAttribute("controls")) {
-	// 		this.removeAttribute("controls")   
-	// 	}
-	// });
-	// $('#my_video2').mouseenter(function() {
-	// 	if (!this.hasAttribute("controls")) {
-	// 		this.setAttribute("controls","controls")   
-	// 	}
-	// });
-	// $('#my_video2').mouseout(function() {
-	// 	if (this.hasAttribute("controls")) {
-	// 		this.removeAttribute("controls")   
-	// 	}
-	// });
 });
