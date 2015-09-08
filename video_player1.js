@@ -47,3 +47,4 @@ $(document).ready(function() {
             durtimetext.innerHTML = durmins+":"+dursecs;
     });
 });
+
