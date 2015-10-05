@@ -22,7 +22,7 @@ div#control0{
 button.playbtn:hover{ opacity:1;}
 button.pausebtn:hover{ opacity:1;}
 button.playbtn{
-	background-image:url(play.png);
+	background-image:url(/video_player/icon/play.png);
     position:relative;
 	border:none;
 	width:28px;
@@ -34,7 +34,7 @@ button.playbtn{
 	cursor:pointer;
 }
 button.pausebtn{
-	background-image:url(pause.png);
+	background-image:url(/video_player/icon/pause.png);
     position:relative;
 	border:none;
 	width:28px;
@@ -46,7 +46,7 @@ button.pausebtn{
 	cursor:pointer;
 }
 button.mutebtn{
-	background-image:url(unmute.png);
+	background-image:url(/video_player/icon/unmute.png);
 	position:relative;
 	border:none;
 	width:28px;

@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="video_player.css">
 </head>
 <body>
+	<?php include"getVideo.php" ?>
 	<div id="video">
 		<table>
 		<tr>
@@ -12,16 +13,16 @@
 				<div>
 				<h3>Video 1</h3>
 				<video class = "my_video" id="my_video0" width="550" height="310" autoplay>
-			    	<source src="test1.mp4">
+			    	<source src="/video_player/Video/Video><?php echo $row["Video1Id"] ?><.mp4">
 				</video>
 				</div>
 			</td>
 			<td>
 				<div>
 			<h3>Video 2</h3>
-			<video class = "my_video" id="my_video1" width="550" height="310" autoplay>
-		    	<source src="test1.mp4">
-			</video>
+			    <video class = "my_video" id="my_video1" width="550" height="310" autoplay>
+		    		<source src="/video_player/Video/Video2.mp4">
+			    </video>
 		</div>
 			</td>
 		</tr>
