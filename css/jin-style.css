@@ -1,0 +1,13 @@
+.video-container {
+  padding-bottom: 50%;
+  background-color: black;
+}
+
+.video_controls_bar {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.video_controls_bar .component {
+  top: 6px;
+}

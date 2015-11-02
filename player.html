@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/jin-style.css">
+  <link rel="stylesheet" type="text/css" href="./css/video-player.css">
+</head>
+<body>
+	<div class="container-fluid" >
+		<div class="row">
+			<div class="col-xs-6">
+        <h4 class="text-center">Video 1</h4>
+        <div class="embed-responsive embed-responsive-4by3 video-container">
+  				<video class="my_video" id="my_video0">
+  			    	<source src="./Video/Video1.mp4">
+  				</video>
+        </div>
+        <div class="row video_controls_bar">
+          <div class="col-xs-1"><button class="playbtn"></button></div>
+          <!-- <div class="col-xs-1"><button class="pausebtn"></button></div> -->
+          <div class="col-xs-5 component"><input class="seekslider" type="range" min="0" max="100" value="0" step="1"></div>
+          <div class="col-xs-2 component">
+            <span class="curtimetext">00:00</span><span class="slash"> / </span><span class="durtimetext">00:00</span>
+          </div>
+          <div class="col-xs-1"><button class="mutebtn"></button></div>
+          <div class="col-xs-3 component"><input class="volumeslider" type="range" min="0" max="100" value="100" step="1"></div>
+        </div>
+			</div>
+			<div class="col-xs-6">
+        <h4 class="text-center">Video 2</h4>
+        <div class="embed-responsive embed-responsive-4by3 video-container">
+  				<video class="my_video" id="my_video1">
+  			    	<source src="./Video/Video2.mp4">
+  				</video>
+        </div>
+        <div class="row video_controls_bar">
+          <div class="col-xs-1"><button class="playbtn"></button></div>
+          <!-- <div class="col-xs-1"><button class="pausebtn"></button></div> -->
+          <div class="col-xs-5 component"><input class="seekslider" type="range" min="0" max="100" value="0" step="1"></div>
+          <div class="col-xs-2 component">
+            <span class="curtimetext">00:00</span><span class="slash"> / </span><span class="durtimetext">00:00</span>
+          </div>
+          <div class="col-xs-1"><button class="mutebtn"></button></div>
+          <div class="col-xs-3 component"><input class="volumeslider" type="range" min="0" max="100" value="100" step="1"></div>
+        </div>
+        </div>
+			</div>
+		</div>
+	</div>
+	<!-- END OF MAIN CONTAINER -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="video_player.js"></script>
+	<script src="video_player2.js"></script>
+</body>
+</html>
